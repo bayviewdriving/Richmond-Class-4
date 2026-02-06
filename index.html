@@ -8,218 +8,188 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; padding-bottom: 80px; }
+        @media (min-width: 768px) { body { padding-bottom: 0; } }
         h1, h2, h3 { font-family: 'Poppins', sans-serif; }
         .hero-gradient {
             background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=1920');
             background-size: cover;
             background-position: center;
         }
-        /* Style for smooth embedding in platforms like Google Sites */
-        .embed-container {
-            max-width: 100vw;
-            overflow-x: hidden;
-        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 embed-container">
+<body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav class="bg-white border-b sticky top-0 z-50">
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold text-blue-900">Bayview Driving School</span>
+                    <span class="text-xl md:text-2xl font-bold text-blue-900">Bayview Driving School</span>
                 </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#features" class="text-slate-600 hover:text-blue-900 font-medium transition">Why Us</a>
-                    <a href="#pricing" class="text-slate-600 hover:text-blue-900 font-medium transition">Pricing</a>
-                    <a href="#faq" class="text-slate-600 hover:text-blue-900 font-medium transition">FAQ</a>
-                    <a href="#about" class="text-slate-600 hover:text-blue-900 font-medium transition">About</a>
-                    <a href="https://forms.gle/SRVqwWHpWTj9qH8Z9" class="bg-blue-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition shadow-lg">BOOK NOW</a>
+                <div class="hidden md:flex space-x-8 items-center text-sm lg:text-base">
+                    <a href="#features" class="text-slate-600 hover:text-blue-900 font-medium">Why Us</a>
+                    <a href="#pricing" class="text-slate-600 hover:text-blue-900 font-medium">Pricing</a>
+                    <a href="#contact" class="text-slate-600 hover:text-blue-900 font-medium">Contact</a>
+                    <a href="tel:6044990928" class="bg-blue-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> 604-499-0928
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-gradient text-white py-24 px-4 text-center sm:text-left">
+    <header class="hero-gradient text-white py-20 md:py-32 px-4">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
+                <span class="bg-yellow-400 text-blue-900 px-4 py-1 rounded-full font-bold text-sm uppercase tracking-wider mb-4 inline-block">Richmond's Class 4 Specialist</span>
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                    Start Earning with Uber & Lyft in 1 Week
+                    Start Earning with Uber & Lyft in a Week
                 </h1>
                 <p class="text-xl text-blue-100 mb-8 max-w-lg">
-                    Richmond’s specialist for Class 4 Restricted Licensing. We help Class 5 drivers master the Pre-Trip inspection and unlock new career paths.
+                    Pass your Class 4 Restricted Road Test on the first try. We focus on the #1 fail point: The Pre-Trip Inspection.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://forms.gle/SRVqwWHpWTj9qH8Z9" class="bg-yellow-400 text-blue-900 text-center px-8 py-4 rounded-xl font-extrabold text-lg hover:bg-yellow-300 transition shadow-xl">
+                    <a href="#contact" class="bg-yellow-400 text-blue-900 text-center px-8 py-4 rounded-xl font-extrabold text-lg hover:bg-yellow-300 transition shadow-xl">
                         Book Your $210 Session
-                    </a>
-                    <a href="#faq" class="bg-white/10 backdrop-blur-md border border-white/20 text-center px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition">
-                        How it Works
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Value Propositions -->
+    <!-- Features -->
     <section id="features" class="py-20 max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Train With Bayview?</h2>
-            <p class="text-slate-600 text-lg">Don't risk a fail. 47% of students fail on the Pre-Trip—we ensure you aren't one of them.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+            <div class="p-6">
                 <div class="w-16 h-16 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
                     <i class="fa-solid fa-car"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Ride-Share Ready</h3>
-                <p class="text-slate-600">Qualify for Uber, Lyft, and Taxis. We focus on the specific safety standards ride-share platforms require.</p>
+                <h3 class="text-xl font-bold mb-2">Ride-Share Ready</h3>
+                <p class="text-slate-600">Tailored training for Uber and Lyft drivers looking to maximize their earning potential.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
+            <div class="p-6">
                 <div class="w-16 h-16 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                    <i class="fa-solid fa-truck-medical"></i>
+                    <i class="fa-solid fa-clipboard-check"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Essential Services</h3>
-                <p class="text-slate-600">Open doors to careers in Ambulance driving, HandyDART, and corporate shuttle transport.</p>
+                <h3 class="text-xl font-bold mb-2">Pre-Trip Mastery</h3>
+                <p class="text-slate-600">Get our exclusive 12-page handbook with the exact verbal cues ICBC examiners expect.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
+            <div class="p-6">
                 <div class="w-16 h-16 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-                    <i class="fa-solid fa-dollar-sign"></i>
+                    <i class="fa-solid fa-clock"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">High Return</h3>
-                <p class="text-slate-600">Most drivers earn back their training investment within their very first week of professional driving.</p>
+                <h3 class="text-xl font-bold mb-2">Efficient Learning</h3>
+                <p class="text-slate-600">Most experienced students are test-ready in just 2 intensive sessions.</p>
             </div>
         </div>
     </section>
 
-    <!-- Pricing / Package -->
-    <section id="pricing" class="py-20 bg-blue-900 text-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div class="relative">
-                <div class="bg-white text-blue-900 p-10 rounded-3xl shadow-2xl relative z-10">
-                    <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Most Popular</span>
-                    <h2 class="text-3xl font-bold mt-4">Class 4 Restricted Package</h2>
-                    <div class="text-5xl font-extrabold my-6">$210 <span class="text-lg font-normal text-slate-500">GST Incl.</span></div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> 60-Minutes Intensive Coaching</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> 60-Minutes Pre-Trip Mastery Session</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Dual-Control Hybrid Car Included</li>
-                        <li class="flex items-center gap-3 font-bold text-blue-600"><i class="fa-solid fa-gift"></i> FREE: 12-Page Master Handbook</li>
-                    </ul>
-                    <a href="tel:6044990928" class="block text-center bg-blue-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-800 shadow-lg transition">Book Session</a>
-                </div>
-                <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-700/30 rounded-full blur-3xl"></div>
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">The Success Package</h2>
+            <p class="text-blue-100 mb-12">One-on-one professional coaching in Richmond.</p>
+            <div class="bg-white text-blue-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-yellow-400 px-10 py-2 rotate-45 translate-x-10 translate-y-4 font-bold">BEST VALUE</div>
+                <h3 class="text-2xl font-bold mb-2">Class 4 Restricted lessson</h3>
+                <div class="text-6xl font-black my-6">$210 <span class="text-lg font-medium text-slate-400 uppercase">GST Incl.</span></div>
+                <ul class="text-left space-y-4 mb-8 max-w-md mx-auto">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> 2 hours 1-on-1 Lesson</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Pre-Trip inspection training</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Road test practice in Dual-Control Hybrid Training Car</li>
+                    <li class="flex items-center gap-3 font-bold text-blue-600"><i class="fa-solid fa-gift"></i> FREE: Pre-Trip Study Handbook</li>
+                </ul>
+                <a href="tel:6044990928" class="block w-full bg-blue-900 text-white py-5 rounded-xl font-bold text-xl hover:bg-blue-800 transition shadow-lg">Call to Book Now</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4">
+               <div class="grid md:grid-cols-2 gap-16 items-start">
             <div>
-                <h2 class="text-4xl font-bold mb-6 leading-tight text-white">Master the Pre-Trip Inspection</h2>
-                <p class="text-blue-100 text-lg mb-6">
-                    The biggest obstacle to the Class 4 license is the "Point and Tell" verbal inspection. We provide the car, the cues, and the confidence to help you ace it on your first try.
+                <h2 class="text-3xl font-bold mb-6 text-blue-900">Book Your Lesson</h2>
+                <p class="text-slate-600 mb-8 text-lg">
+                    Have questions or want to check availability? Send a message below, call us, or send a quick text. We are available 7 days a week.
                 </p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="border border-blue-700 p-4 rounded-xl">
-                        <div class="text-yellow-400 text-2xl mb-2 font-bold">1-on-1</div>
-                        <p class="text-sm">Personalized instruction tailored to your habits.</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center shadow-sm"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="text-sm text-slate-500 uppercase font-bold tracking-wider">Call Directly</div>
+                            <div class="text-xl font-bold"><a href="tel:6044990928" class="hover:text-blue-700 transition">604-499-0928</a></div>
+                        </div>
                     </div>
-                    <div class="border border-blue-700 p-4 rounded-xl">
-                        <div class="text-yellow-400 text-2xl mb-2 font-bold">$50 Value</div>
-                        <p class="text-sm">Free Pre-Trip Handbook with every booking.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-green-100 text-green-900 rounded-full flex items-center justify-center shadow-sm"><i class="fa-solid fa-comment-sms"></i></div>
+                        <div>
+                            <div class="text-sm text-slate-500 uppercase font-bold tracking-wider">Text Message</div>
+                            <div class="text-xl font-bold"><a href="sms:+16044990928" class="hover:text-green-700 transition">604-499-0928</a></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center shadow-sm"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="text-sm text-slate-500 uppercase font-bold tracking-wider">Email</div>
+                            <div class="text-lg font-bold"><a href="mailto:Bayviewdriving@yahoo.com?subject=Class 4 Training Inquiry" class="hover:text-blue-700 transition">Bayviewdriving@yahoo.com</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-20 max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-        <div class="space-y-6">
-            <details class="group bg-white border rounded-xl p-6 shadow-sm cursor-pointer" open>
-                <summary class="flex justify-between items-center font-bold text-lg list-none">
-                    How quickly can I get my license?
-                    <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
-                </summary>
-                <p class="mt-4 text-slate-600">Most experienced Class 5 drivers are test-ready in just 2 sessions. We focus on correcting "civilian" habits immediately to meet commercial standards.</p>
-            </details>
-            <details class="group bg-white border rounded-xl p-6 shadow-sm cursor-pointer">
-                <summary class="flex justify-between items-center font-bold text-lg list-none">
-                    Do I need a medical exam?
-                    <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
-                </summary>
-                <p class="mt-4 text-slate-600">Yes. After passing your Road Test, ICBC will provide a medical form. A doctor must complete this before you can got your full commerial lincense.</p>
-            </details>
-            <details class="group bg-white border rounded-xl p-6 shadow-sm cursor-pointer">
-                <summary class="flex justify-between items-center font-bold text-lg list-none">
-                    Can I use my own car for training?
-                    <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
-                </summary>
-                <p class="mt-4 text-slate-600">Yes! We can train you on your personal vehicle for the Pre-Trip portion so you are comfortable with the exact car you'll use for the road test and ride-sharing. For the on-road driving portion of your lesson, we use our dual-control Corolla Hybrid to ensure maximum safety and comfort. </p>
-            </details>
-            <details class="group bg-white border rounded-xl p-6 shadow-sm cursor-pointer">
-                <summary class="flex justify-between items-center font-bold text-lg list-none">
-                    Is the Handbook really free?
-                    <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
-                </summary>
-                <p class="mt-4 text-slate-600">Yes. It is a $50 value. It contains all the verbal cues and technical checklists the examiners expect, allowing you to study at your own pace between lessons.</p>
-            </details>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
-            <div class="w-full md:w-1/2">
-                <div class="rounded-3xl overflow-hidden shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1593950315186-76a92975b60c?auto=format&fit=crop&q=80&w=800" alt="Driving Lesson">
-                </div>
-            </div>
-            <div class="w-full md:w-1/2">
-                <h2 class="text-3xl font-bold mb-6">Professional Instruction You Can Trust</h2>
-                <p class="text-slate-600 text-lg mb-6">
-                    At Bayview Driving School, we believe that obtaining a Class 4 license is about more than just a permit—it's about professional safety and career potential. 
-                </p>
-                <p class="text-slate-600 text-lg mb-8">
-                    Our lessons are calm, focused, and designed around the actual ICBC testing routes in Richmond. Whether you're aiming for Uber or a career in essential transport, we provide the tools to get you there.
-                </p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-lg">B</div>
+            <!-- Contact Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                <h3 class="text-xl font-bold mb-6 text-blue-900">Send a Message</h3>
+                <!-- Change your-email@example.com to your actual email address -->
+                <form action="https://formspree.io/f/mvzbpykk" method="POST" class="space-y-5">
                     <div>
-                        <div class="font-bold">Bayview Driving School</div>
-                        <div class="text-sm text-slate-500">Richmond’s Class 4 Specialist</div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-900 outline-none transition" placeholder="John Doe">
                     </div>
-                </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
+                        <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-900 outline-none transition" placeholder="604-XXX-XXXX">
+                    </div>
+<div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Email</label>
+                        <input type="text" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-900 outline-none transition" placeholder="JohnDoe@gmail.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">How can we help?</label>
+                        <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-900 outline-none transition" placeholder="I'd like to book a Class 4 lesson..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 text-white py-4 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg">Send Inquiry</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-950 text-slate-400 py-12 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-            <div class="text-white">
-                <div class="text-2xl font-bold mb-2">Bayview Driving School</div>
-                <p>Helping Richmond drivers unlock their potential.</p>
-            </div>
-            <div class="flex gap-6 text-2xl">
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <div class="text-center md:text-right">
-                <div class="text-white font-bold mb-2 text-xl">604-499-0928</div>
-                <p>Richmond, BC</p>
-            </div>
+  <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 text-center">
+        <p class="text-white font-bold text-xl mb-4">Bayview Driving School</p>
+        <p class="mb-8">Professional Commercial Driver Training in Richmond, BC.</p>
+        <div class="flex justify-center gap-6 text-2xl mb-8">
+            <a href="https://www.facebook.com/BayviewDriving/" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bayviewdriving/" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <div class="text-center mt-12 pt-8 border-t border-blue-900 text-sm">
+        <div class="text-xs uppercase tracking-widest border-t border-slate-800 pt-8">
             &copy; 2026 Bayview Driving School. All rights reserved.
         </div>
     </footer>
 
-    <!-- Back to top button for embedded views -->
-    <a href="#" class="fixed bottom-6 right-6 bg-blue-900 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl hover:bg-blue-800 transition z-50 md:hidden">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
+    <!-- Mobile Quick Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t p-3 grid grid-cols-3 gap-2 z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.1)]">
+        <a href="tel:6044990928" class="bg-blue-900 text-white text-center py-3 rounded-lg font-bold flex flex-col items-center justify-center text-xs">
+            <i class="fa-solid fa-phone mb-1"></i> Call
+        </a>
+        <a href="sms:+16044990928" class="bg-green-600 text-white text-center py-3 rounded-lg font-bold flex flex-col items-center justify-center text-xs">
+            <i class="fa-solid fa-comment-sms mb-1"></i> Text
+        </a>
+        <a href="mailto:Bayviewdriving@yahoo.com?subject=Class 4 Training Inquiry" class="bg-slate-700 text-white text-center py-3 rounded-lg font-bold flex flex-col items-center justify-center text-xs">
+            <i class="fa-solid fa-envelope mb-1"></i> Email
+        </a>
+    </div>
 
 </body>
-
 </html>
