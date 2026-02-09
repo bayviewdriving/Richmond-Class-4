@@ -7,7 +7,7 @@
     <meta name="description" content="Professional Class 4 Restricted training in Richmond, BC. Specialized ICBC road test preparation for Uber and Lyft drivers.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="canonical" href="https://www.richmondclass4.com/" />
-    <link rel="icon" href="/favicon.png" sizes="any">
+    <link rel="icon" href="favicon.png" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -20,6 +20,18 @@
         .sticky-header { position: sticky; top: 0; z-index: 1000; width: 100%; }
         .form-label { display: block; font-size: 0.875rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem; }
         @media (min-width: 768px) { .mobile-only-bar { display: none !important; } }
+        
+        .phone-pill {
+            background-color: #1e3a8a;
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 12px;
+            font-weight: 800;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .phone-pill:hover { background-color: #1d4ed8; transform: translateY(-1px); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 pb-20 md:pb-0">
@@ -35,20 +47,24 @@
             </div>
         </div>
 
-        <nav class="bg-white border-b h-20">
+        <nav class="bg-white border-b h-16 md:h-24">
             <div class="max-w-7xl mx-auto px-4 flex justify-between h-full items-center">
-                <span class="text-xl md:text-2xl font-bold text-blue-900">Bayview Driving School</span>
+                <a href="#" class="flex items-center gap-2 md:gap-4">
+                    <img src="logoheader.jpg" alt="Logo" class="h-8 md:h-12 w-auto object-contain">
+                    <span class="text-sm md:text-2xl font-bold text-blue-900 leading-tight">Bayview<br class="md:hidden"> Driving School</span>
+                </a>
+                
                 <div class="hidden md:flex space-x-8 items-center font-medium text-slate-600">
                     <a href="#features" class="hover:text-blue-900 transition">Why Us</a>
                     <a href="#pricing" class="hover:text-blue-900 transition">Pricing</a>
                     <a href="#contact" class="hover:text-blue-900 transition">Contact</a>
-                    <div class="flex flex-col items-end border-l pl-6">
+                    <div class="flex flex-col items-center ml-4">
                         <div class="text-[9px] text-blue-600 font-extrabold uppercase tracking-tighter mb-1 space-x-1">
-                            <a href="tel:6044990928" class="hover:underline">Call</a> • 
-                            <a href="sms:+16044990928?&body=I am interested in the Class 4 lesson. Please let me know your availability." class="hover:underline">Text</a> • 
-                            <a href="https://wa.me/16044990928?text=I am interested in the Class 4 lesson. Please let me know your availability." target="_blank" rel="noopener noreferrer" class="hover:underline">WhatsApp</a>
+                            <a href="tel:6044990928" class="hover:underline">CALL</a> • 
+                            <a href="sms:+16044990928?&body=I am interested in the Class 4 lesson. Please let me know your availability." class="hover:underline">TEXT</a> • 
+                            <a href="https://wa.me/16044990928?text=I am interested in the Class 4 lesson. Please let me know your availability." target="_blank" class="hover:underline">WHATSAPP</a>
                         </div>
-                        <a href="tel:6044990928" class="text-blue-900 text-xl font-bold hover:text-blue-700 transition">604-499-0928</a>
+                        <a href="tel:6044990928" class="phone-pill text-xl">604-499-0928</a>
                     </div>
                 </div>
             </div>
@@ -66,6 +82,32 @@
         </div>
     </header>
 
+    <section id="features" class="py-20 bg-white px-4 border-b">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-car text-blue-900 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Ride-Share Ready</h3>
+                <p class="text-slate-600">Tailored training for Uber and Lyft drivers looking to maximize earning potential.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-clipboard-check text-blue-900 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Pre-Trip Mastery</h3>
+                <p class="text-slate-600">Get our exclusive 12-page handbook with the exact verbal cues ICBC examiners expect.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-clock text-blue-900 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-blue-900">Efficient Learning</h3>
+                <p class="text-slate-600">Most experienced students are test-ready in just 2 intensive sessions.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="pricing" class="py-20 bg-blue-900 text-white px-4">
         <div class="max-w-4xl mx-auto text-center bg-white text-blue-900 rounded-3xl p-8 md:p-12 shadow-2xl border-4 border-yellow-400">
             <h3 class="text-2xl font-bold mb-6 tracking-wide text-blue-900">Class 4 Restricted driving lesson</h3>
@@ -80,50 +122,53 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16">
-        <div>
-            <h2 class="text-3xl font-bold mb-6 text-blue-900">Book Your Lesson</h2>
-            <p class="text-slate-600 mb-8 text-lg">Have questions? We are available 7 days a week.</p>
-            
-            <div class="hidden md:block bg-white p-8 rounded-3xl border shadow-sm">
-                <div class="text-center mb-8">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Speak With Us Directly</span>
-                    <div class="text-4xl font-black text-slate-800 mt-2">604-499-0928</div>
-                </div>
-                <div class="grid grid-cols-3 gap-4 mb-8 text-center">
-                    <a href="tel:6044990928" class="p-4 bg-blue-50 rounded-2xl hover:bg-blue-100 transition"><i class="fa-solid fa-phone text-blue-900 text-2xl mb-2"></i><span class="block text-[10px] font-bold uppercase">Call</span></a>
-                    <a href="sms:+16044990928?&body=I am interested in the Class 4 lesson. Please let me know your availability." class="p-4 bg-green-50 rounded-2xl hover:bg-green-100 transition"><i class="fa-solid fa-comment-sms text-green-600 text-2xl mb-2"></i><span class="block text-[10px] font-bold uppercase">Text</span></a>
-                    <a href="https://wa.me/16044990928?text=I am interested in the Class 4 lesson. Please let me know your availability." target="_blank" rel="noopener noreferrer" class="p-4 bg-[#e7f9ee] rounded-2xl hover:bg-[#dcfce7] transition"><i class="fa-brands fa-whatsapp text-[#25D366] text-2xl mb-2"></i><span class="block text-[10px] font-bold uppercase">WhatsApp</span></a>
-                </div>
-                <div class="flex items-center justify-center gap-3 p-4 bg-slate-50 rounded-2xl border border-transparent hover:border-blue-200 transition">
-                    <i class="fa-solid fa-envelope text-blue-900"></i>
-                    <span class="text-sm font-semibold text-slate-500 italic uppercase mr-1">Email:</span>
-                    <a href="mailto:info@BayviewDriving.com?subject=Class 4 Lesson Inquiry&body=I am interested in the Class 4 lesson. Please let me know your availability." class="font-bold text-blue-900 hover:underline">info@BayviewDriving.com</a>
+    <section id="contact" class="py-20 bg-white px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <img src="logo.png" alt="Bayview Logo" class="w-full max-w-sm mb-6 object-contain">
+                <h2 class="text-3xl font-bold mb-6 text-blue-900">Book Your Lesson</h2>
+                <p class="text-slate-600 mb-8 text-lg">Have questions? We are available 7 days a week.</p>
+                
+                <div class="hidden md:block bg-slate-50 p-8 rounded-3xl border shadow-sm">
+                    <div class="text-center mb-8">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Speak With Us Directly</span>
+                        <div class="text-4xl font-black text-slate-800 mt-2">604-499-0928</div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+                        <a href="tel:6044990928" class="p-4 bg-white rounded-2xl hover:bg-blue-100 transition border shadow-sm"><i class="fa-solid fa-phone text-blue-900 text-2xl mb-2"></i><span class="block text-[10px] font-bold uppercase">Call</span></a>
+                        <a href="sms:+16044990928?&body=I am interested in the Class 4 lesson. Please let me know your availability." class="p-4 bg-white rounded-2xl hover:bg-green-100 transition border shadow-sm"><i class="fa-solid fa-comment-sms text-green-600 text-2xl mb-2"></i><span class="block text-[10px] font-bold uppercase">Text</span></a>
+                        <a href="https://wa.me/16044990928?text=I am interested in the Class 4 lesson. Please let me know your availability." target="_blank" rel="noopener noreferrer" class="p-4 bg-white rounded-2xl hover:bg-[#dcfce7] transition border shadow-sm"><i class="fa-brands fa-whatsapp text-[#25D366] text-2xl mb-2"></i><span class="block text-[10px] font-bold uppercase">WhatsApp</span></a>
+                    </div>
+                    <div class="flex items-center justify-center gap-3 p-4 bg-white rounded-2xl border border-blue-100 transition">
+                        <i class="fa-solid fa-envelope text-blue-900"></i>
+                        <span class="text-sm font-semibold text-slate-500 italic uppercase mr-1">Email:</span>
+                        <a href="mailto:info@BayviewDriving.com?subject=Class 4 Lesson Inquiry&body=I am interested in the Class 4 lesson. Please let me know your availability." class="font-bold text-blue-900 hover:underline">info@BayviewDriving.com</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="bg-white p-8 rounded-3xl shadow-2xl border border-slate-100 md:mt-[-40px]">
-            <h3 class="text-xl font-bold mb-6 text-blue-900">Send a Message</h3>
-            <form action="https://formspree.io/f/mvzbpykk" method="POST" class="space-y-4">
-                <div>
-                    <label class="form-label">Full Name</label>
-                    <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900" placeholder="e.g. John Doe">
-                </div>
-                <div>
-                    <label class="form-label">Phone Number</label>
-                    <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900" placeholder="604-000-0000">
-                </div>
-                <div>
-                    <label class="form-label">Email Address</label>
-                    <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900" placeholder="john@example.com">
-                </div>
-                <div>
-                    <label class="form-label">Your Message</label>
-                    <textarea name="message" rows="3" onfocus="this.select()" class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900 text-slate-500">I am interested in the Class 4 lesson. Please let me know your availability.</textarea>
-                </div>
-                <button type="submit" class="w-full bg-blue-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition">Send Inquiry</button>
-            </form>
+            <div class="bg-slate-50 p-8 rounded-3xl shadow-2xl border border-slate-100 md:mt-[-40px]">
+                <h3 class="text-xl font-bold mb-6 text-blue-900">Send a Message</h3>
+                <form action="https://formspree.io/f/mvzbpykk" method="POST" class="space-y-4">
+                    <div>
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900" placeholder="e.g. John Doe">
+                    </div>
+                    <div>
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900" placeholder="604-000-0000">
+                    </div>
+                    <div>
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="form-label">Your Message</label>
+                        <textarea name="message" rows="3" onfocus="this.select()" class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-900 text-slate-500">I am interested in the Class 4 lesson. Please let me know your availability.</textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition shadow-lg">Send Inquiry</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -131,6 +176,12 @@
         <p class="text-white font-bold text-xl mb-4">Bayview Driving School</p>
         <p class="mb-4 text-sm">Professional Commercial Driver Training in Richmond, BC.</p>
         <p class="mb-8 text-sm italic">Need beginner lessons? <a href="https://www.bayviewdriving.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline font-bold">Visit our Richmond Class 5 & 7 Driving School</a>.</p>
+        
+        <div class="flex justify-center gap-6 mb-8 text-2xl">
+            <a href="https://www.facebook.com/bayviewdrivingschool" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bayviewdrivingschool/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
         <p class="text-[9px] max-w-2xl mx-auto mb-12 leading-relaxed opacity-50 tracking-wide text-center">Bayview Driving School is an independent entity and not a subsidiary of or affiliated with Uber or Lyft. Uber and Lyft are trademarks of their respective owners.</p>
         <div class="text-[10px] uppercase border-t border-slate-800 pt-8 tracking-widest">&copy; 2026 Bayview Driving School. All rights reserved.</div>
     </footer>
