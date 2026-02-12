@@ -213,6 +213,85 @@
         <a href="https://wa.me/16044990928?text=你好，我想预约 Class 4 驾考课程，请问最近什么时候有课位？谢谢！" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white text-center py-4 rounded-lg font-black text-[13px] flex flex-col items-center justify-center"><i class="fa-brands fa-whatsapp mb-1 text-xl"></i>WhatsApp</a>
         <a href="mailto:info@BayviewDriving.com?subject=Class%204%20lesson" class="bg-slate-700 text-white text-center py-4 rounded-lg font-black text-[13px] flex flex-col items-center justify-center"><i class="fa-solid fa-envelope mb-1 text-xl"></i>EMAIL</a>
     </div>
+<script>
+(function() {
+    // 1. 純 Cookie 讀寫邏輯
+    function setHideCookie() {
+        const date = new Date();
+        // 設置 24 小時後過期
+        date.setTime(date.getTime() + (24 * 60 * 60 * 1000));
+        // path=/ 確保在 index, indexTC, indexSC 之間共享狀態
+        document.cookie = "hideLangBar=true;expires=" + date.toUTCString() + ";path=/;SameSite=Lax";
+    }
 
+    function getHideCookie() {
+        const cookieValue = `; ${document.cookie}`;
+        const parts = cookieValue.split(`; hideLangBar=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    // 2. 環境偵測
+    const userLang = navigator.language || navigator.userLanguage;
+    const isClosed = getHideCookie();
+    const path = window.location.pathname;
+
+    // 如果 Cookie 存在，則直接退出，不顯示
+    if (isClosed === 'true') return;
+
+    let message = "";
+    
+    // 3. 智能判斷邏輯
+    if (!path.includes('indexTC.html') && !path.includes('indexSC.html')) {
+        if (userLang.includes('zh-CN')) {
+            message = '检测到您的浏览器语言为简体中文，是否切换至 <a href="indexSC.html">【简体中文版】</a>？';
+        } else if (userLang.includes('zh')) {
+            message = '偵測到您的語言為繁體中文，是否切換至 <a href="indexTC.html">【繁體中文版】</a>？';
+        }
+    }
+    else if (path.includes('indexTC.html') && userLang.includes('zh-CN')) {
+        message = '检测到您的浏览器语言为简体中文，是否切换至 <a href="indexSC.html">【简体中文版】</a>？';
+    }
+    else if (path.includes('indexSC.html') && (userLang.includes('zh-TW') || userLang.includes('zh-HK'))) {
+        message = '偵測到您的語言為繁體中文，是否切換至 <a href="indexTC.html">【繁體中文版】</a>？';
+    }
+
+    // 4. 渲染提示條
+    if (message) {
+        const style = document.createElement('style');
+        style.innerHTML = `
+            #smart-lang-bar { 
+                background: #facc15 !important; 
+                color: #1e3a8a !important; 
+                padding: 12px 40px 12px 15px; 
+                text-align: center; 
+                font-weight: 800; 
+                font-size: 15px; 
+                position: relative; 
+                z-index: 10001; 
+                border-bottom: 2px solid #1e3a8a; 
+                animation: langSlideDown 0.5s ease; 
+                font-family: sans-serif;
+                line-height: 1.4;
+            }
+            #smart-lang-bar a { text-decoration: underline !important; margin-left: 5px; color: #1e3a8a !important; font-weight: 900; }
+            #close-lang-bar { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 24px; font-weight: bold; line-height: 1; }
+            @keyframes langSlideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+        `;
+        document.head.appendChild(style);
+
+        const bar = document.createElement('div');
+        bar.id = 'smart-lang-bar';
+        bar.innerHTML = message + '<span id="close-lang-bar">&times;</span>';
+        document.body.prepend(bar);
+
+        // 點擊關閉按鈕
+        document.getElementById('close-lang-bar').onclick = function() {
+            document.getElementById('smart-lang-bar').style.display = 'none';
+            setHideCookie();
+        };
+    }
+})();
+</script>
 </body>
 </html>
