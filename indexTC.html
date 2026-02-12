@@ -35,7 +35,7 @@
     <div class="sticky-header shadow-md">
         <div class="bg-blue-900 text-white py-2.5 px-4 flex justify-between items-center text-[11px] md:text-sm font-bold">
             <div class="flex-1 text-center md:text-left tracking-tight md:tracking-normal">
-                新手想學車？即睇 <a href="https://www.bayviewdriving.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-400 transition">Bayview Richmond Class 5 & 7 駕駛課程</a>
+                預備考 Class 5 / 7? 即睇 <a href="https://www.bayviewdriving.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-400 transition">Bayview Richmond Class 5/7 考證規範與駕駛課程</a>
             </div>
             <div class="flex gap-4 md:gap-5 ml-2 md:ml-4 border-l border-blue-700 pl-3 md:pl-4 text-[12px] md:text-base">
                 <a href="index.html" class="hover:text-yellow-400 transition">EN</a>
@@ -98,14 +98,14 @@
                 <div class="w-14 h-14 bg-blue-100 rounded-2xl flex shrink-0 items-center justify-center text-blue-900 text-2xl"><i class="fa-solid fa-truck-ramp-box"></i></div>
                 <div>
                     <h3 class="text-xl font-bold mb-2 text-blue-900">根據真實車型示範最佳檢查次序</h3>
-                    <p class="text-slate-700 leading-relaxed text-base md:text-lg">根據你應考的真實車型（如 4 門私家車 vs 7 座側滑門 Van）示範一氣呵成的檢查次序。我們會詳細教導不同車型的檢查策略（例如 7 人車內部安全帶及滑門的操作順序）以及 Low/High beam (頭燈) 與 Parking brake (手掣) 的位置、操作及檢查動作細節。確保你掌握示範要領，配合課後自行練習，在路試中表現自然熟練。</p>
+                    <p class="text-slate-700 leading-relaxed text-base md:text-lg">根據您應考的真實車型（如 4 門轎車 vs 5 門掀背車 vs 7 座 SUV）示範一氣呵成的檢查次序。針對不同車型特點（例如 7 座 SUV 的後排安全帶及滑門檢查順序）以及車頭燈 (Low/High beam) 與 手掣(Parking brake)的位置、操作及檢查動作細節。確保您掌握示範要領，配合課後自行練習，在路考中表現自然熟練。</p>
                 </div>
             </div>
             <div class="bg-slate-50 p-6 md:p-8 rounded-3xl border flex flex-col md:flex-row gap-5 items-center md:items-start">
                 <div class="w-14 h-14 bg-blue-100 rounded-2xl flex shrink-0 items-center justify-center text-blue-900 text-2xl"><i class="fa-solid fa-gauge-high"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold mb-2 text-blue-900">根據 ICBC 評分標準分析駕駛表現</h3>
-                    <p class="text-slate-700 leading-relaxed text-base md:text-lg">根據 ICBC 評分標準逐項分析你的駕駛習慣，並提供針對性的考牌攻略。指出哪些動作會導致扣 10 分（例如：Rolling stop、漏做 Shoulder check）、哪些會導致即時不合格、以及必須做好的指定動作（例如泊車前的 360 度安全觀察及 Right of Way 路權判定）。透過模擬路試加強駕駛考試技巧，展現職業司機應有的應變能力。</p>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">根據 ICBC 考牌標準分析個人駕駛習慣</h3>
+                    <p class="text-slate-700 leading-relaxed text-base md:text-lg">根據 ICBC 考牌標準，逐項分析您的個人駕駛習慣，並提供個人化的考牌攻略。我將全程詳細觀察並解析您的駕駛細節，指出可能導致扣分的動作 (例如：單手扭軚、Rolling stop、漏做 Shoulder check）、哪些會導致即時不合格的嚴重錯誤。針對您的個人習慣，我會提供符合 ICBC 考牌標準的建議（例如：正確的方向盤握姿與操作、路權判定 Right of Way、車速控制 Speed Control 及倒後泊車前 360 度安全觀察）。透過模擬路試加強駕駛考試要注意的細節，協助您建立穩定、自信且符合考官期望的駕駛表現。</p>
                 </div>
             </div>
         </div>
@@ -213,6 +213,54 @@
         <a href="https://wa.me/16044990928?text=你好，我想預約 Class 4 考牌課程，請問最近幾時有上堂時間？謝謝！" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white text-center py-4 rounded-lg font-black text-[13px] flex flex-col items-center justify-center"><i class="fa-brands fa-whatsapp mb-1 text-xl"></i>WhatsApp</a>
         <a href="mailto:info@BayviewDriving.com?subject=Class%204%20lesson" class="bg-slate-700 text-white text-center py-4 rounded-lg font-black text-[13px] flex flex-col items-center justify-center"><i class="fa-solid fa-envelope mb-1 text-xl"></i>EMAIL</a>
     </div>
+
+<script>
+(function() {
+    function setHideCookie() {
+        const date = new Date();
+        date.setTime(date.getTime() + (24 * 60 * 60 * 1000));
+        document.cookie = "hideLangBar=true;expires=" + date.toUTCString() + ";path=/;SameSite=Lax";
+    }
+
+    function getHideCookie() {
+        const cookieValue = `; ${document.cookie}`;
+        const parts = cookieValue.split(`; hideLangBar=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    const userLang = navigator.language || navigator.userLanguage;
+    const isClosed = getHideCookie();
+    const path = window.location.pathname;
+
+    if (isClosed === 'true') return;
+
+    let message = "";
+    // 專為 TC 頁面設計：偵測到簡體用戶時提醒切換
+    if (path.includes('indexTC.html') && userLang.includes('zh-CN')) {
+        message = '检测到您的语言偏好为简体中文，是否切换至 <a href="indexSC.html" class="lang-link">【简体中文版】</a>？';
+    }
+
+    if (message) {
+        const style = document.createElement('style');
+        style.innerHTML = `
+            #smart-lang-bar { background: #facc15 !important; color: #1e3a8a !important; padding: 12px 40px 12px 15px; text-align: center; font-weight: 800; font-size: 15px; position: relative; z-index: 10001; border-bottom: 2px solid #1e3a8a; animation: langSlideDown 0.5s ease; font-family: sans-serif; line-height: 1.4; }\n            #smart-lang-bar a { text-decoration: underline !important; margin-left: 5px; color: #1e3a8a !important; font-weight: 900; }\n            #close-lang-bar { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 24px; font-weight: bold; line-height: 1; }\n            @keyframes langSlideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }\n        `;
+        document.head.appendChild(style);
+        const bar = document.createElement('div');
+        bar.id = 'smart-lang-bar';
+        bar.innerHTML = message + '<span id="close-lang-bar">&times;</span>';
+        document.body.prepend(bar);
+
+        document.getElementById('close-lang-bar').onclick = function() {
+            document.getElementById('smart-lang-bar').style.display = 'none';
+            setHideCookie();
+        };
+
+        const langLinks = document.querySelectorAll('.lang-link');
+        langLinks.forEach(link => { link.onclick = function() { setHideCookie(); }; });
+    }
+})();
+</script>
 
 </body>
 </html>
