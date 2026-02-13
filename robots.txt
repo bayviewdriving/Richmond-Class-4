@@ -1,0 +1,15 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Block any private or staging folders (if any in future)
+# Disallow: /private/
+# Disallow: /test/
+
+# Link to your sitemap for faster discovery
+Sitemap: https://richmondclass4.com/sitemap.xml
+
+# Optional: Keep IndexNow key public (Bing uses this file to verify)
+# Replace YOUR_KEY with your actual IndexNow key
+# This is optional if you already have your key as a separate txt
+# IndexNow: https://richmondclass4.com/d9fe402f528e4d43ac07684ce81f201e.txt
